@@ -10,7 +10,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                echo 'Checkout code'
+                git 'https://github.com/sandeeprlb/devops-ci-pipeline.git'
             }
         }
 
@@ -29,7 +29,7 @@ pipeline {
 
     post {
         always {
-            junit '**/target/surefire-reports/*.xml'
+            echo 'Pipeline completed'
         }
     }
 }
