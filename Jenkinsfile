@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'echo "New commit  CI pipelines"'
+                echo "force trigger test"
             }
         }
     }
