@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'CI Pipeline Started'
+                echo 'echo "New commit test for CI pipeline"'
             }
         }
     }
