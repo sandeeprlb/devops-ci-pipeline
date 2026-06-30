@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    tools {
+        jdk 'JDK25'
+        maven 'Maven'
+    }
+
     stages {
 
         stage('Checkout') {
@@ -20,6 +25,5 @@ pipeline {
                 bat 'mvn test'
             }
         }
-
     }
 }
