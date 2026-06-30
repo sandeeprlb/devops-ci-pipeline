@@ -10,7 +10,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                echo 'Checking out source code'
+                echo 'Checkout code'
             }
         }
 
@@ -21,17 +21,15 @@ pipeline {
         }
 
         stage('Test') {
-    steps {
-        bat 'mvn test'
-    }
-}
-
-post {
-    always {
-        junit '**/target/surefire-reports/*.xml'
-    }
-}
+            steps {
+                bat 'mvn test'
             }
+        }
+    }
+
+    post {
+        always {
+            junit '**/target/surefire-reports/*.xml'
         }
     }
 }
